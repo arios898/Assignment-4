@@ -5,7 +5,16 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
  
- import {getDocs, collection, firestore, onSnapshot, doc,
+ import { firestore,  
+  collection, 
+  getDocs, 
+  addDoc, 
+  doc, 
+  deleteDoc, 
+  query, 
+  where, 
+  updateDoc, 
+  onSnapshot,
  } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
  
  
@@ -40,6 +49,12 @@
 const recipesList = document.querySelector('#recipes-list');
 const form = document.querySelector('#add-recipes-form')
 
+// to show elements within the database 
+getRecipes(db).then((docs) => {
+  docs.forEach((d) => {
+    console.log(d.data());
+  })
+})
 
 
 
@@ -87,7 +102,9 @@ const recipes = getDocs(collection(db, "Recipes"))
 form.addEventListener(('submit'), (e) => {
   e.preventDefault();
   const docRef = addDoc(collection(db, "Recipes"), {
-      city: form.city.value,
-      name: form.name.value
+    title: form.title.value,
+    website: form.website.value,
+    ingredients: form.ingredients.value,
+    servingSize: form.servingSize.value,
   })
 })
