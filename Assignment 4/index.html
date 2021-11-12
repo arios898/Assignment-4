@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="materialize.min.css">
+    
+<link rel="stylesheet" href="styles.css">
+  
+    <title>Ingredients for Recipes</title>
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+
+
+</head>
+<body>
+    <h1>Recipe Ingredients</h1>
+    <div class="content">
+        <form  class="row" id="add-recipes-form">
+            <input class="col" type="text" name="title" placeholder="Recipe Name">
+            <input style="padding-top: 15px;" class="col  " type="text" name="source" placeholder="Recipe Source Website">          
+            <input  style="padding-top: 15px;"  class="col  " type="number" name="servingSize" placeholder="Serving Size">
+            <input style="padding-top: 15px;" class="col " type="text" name="ingredients" placeholder="Add Ingredient">
+            <div class="input_fields_wrap">
+             
+            </div>
+             <button class="add_ingredient_button     waves-effect waves-light btn ">Add More Ingredients</button>
+            
+        <div class="center row ">
+            
+          <button class="waves-effect waves-light btn col s12 " style="margin-top: 5px;" >Submit</button>  
+        </div>
+        </form>
+        
+        <ul id="recipes-list"></ul>
+    </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/Assignment 4/js/ui.js"></script>
+
+
+<script type="text/javascript" src="/Assignment 4/js/materialize.min.js"></script>  
+
+<script  type="module" src="/Assignment 4/js/db.js"></script> 
+</body>
+</html>
